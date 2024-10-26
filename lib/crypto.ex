@@ -15,7 +15,7 @@ defmodule Mnemonic.Crypto do
     result
   end
 
-  def hmac_sha512(key, data), do: :crypto.hmac(:sha512, key, data)
+  def hmac_sha512(key, data), do: :crypto.mac(:hmac, :sha512, key, data)
 
   def sha256(data), do: :crypto.hash(:sha256, data)
 end
